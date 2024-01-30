@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Amar Beauty And Spa</title>
+    <link rel="icon" type="image/png" href="./assets/images/Untitled.png">
+
+    <style>
+      :root {
+          --primary-color: #8f5ce7;
+          --secondary-color: #ffffff;
+          --background-color: #Ffc0cb;
+          --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          --transition-duration: 0.3s;
+          --animation-duration: 2s;
+      }
+
+      * {
+          box-sizing: border-box;
+      }
+
+     body {
+        background-color: var(--background-color);
+        margin: 0;
+        padding: 20px;
+        font-family: 'Playfair Display', serif;
+        animation: fadeIn var(--animation-duration);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 90px;
+    width: auto;
+    margin-right: 20px;
+}
+.logo-container a {
+    margin-right: auto;
+}
+header {
+    background: linear-gradient(to right, #000000, #000000); /* Use your preferred colors */
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* Increase the top and bottom padding */
+    height: 100px; /* Increase the height of the header */
+}
+
+      nav {
+        display: flex;
+        align-items: center;
+      }
+
+      nav a {
+        color: #333;
+        text-decoration: none;
+        margin-left: 20px;
+        transition: color var(--transition-duration) ease;
+      }
+
+      nav a:hover {
+        color: var(--primary-color);
+      }
+
+      .social-links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        margin-left: 1rem;
+        border-radius: 50%;
+        transition: background-color var(--transition-duration) ease;
+        animation: pulse var(--animation-duration) infinite;
+      }
+
+      .social-link:hover {
+        background-color: var(--primary-color);
+      }
+
+      .social-link img {
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      nav a {
+    color: #fff; /* Set text color to white */
+    text-decoration: none;
+    margin: center;
+    font-weight: bold; /* Make the font bold */
+    font-size: 1.5rem; /* Increase the font size */
+    transition: color var(--transition-duration) ease;
+}
+
+nav a:hover {
+    color: #cc00ff; /* Change the color on hover */
+}
+
+      .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url("https://source.unsplash.com/random/1600x900/?spa,relaxation");
+        background-size: cover;
+        background-position: center;
+        animation: fadeIn var(--animation-duration);
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        color: #fff;
+        margin-bottom: 20px;
+        animation: slideInFromTop var(--animation-duration);
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 40px;
+        animation: slideInFromBottom var(--animation-duration);
+      }
+
+      .cta-button {
+        background-color: #Ffc0cb;
+        color: #fff;
+        padding: 10px 60px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+        animation: fadeIn var(--animation-duration);
+      }
+
+      .cta-button:hover {
+        background-color: #fff;
+        color: #Ffc0cb;
+        border: 1px solid #Ffc0cb;
+      }
+
+      .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+      }
+
+      .service {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: calc(33.33% - 20px);
+        margin: 10px;
+        background-color: var(--secondary-color);
+        box-shadow: var(--box-shadow);
+        padding: 20px;
+        text-align: center;
+        transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+        animation: fadeIn var(--animation-duration);
+      }
+
+      .service:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .service h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        transition: color var(--transition-duration) ease;
+      }
+
+      .service h2:hover {
+        color: var(--primary-color);
+      }
+
+      .pricing-table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--secondary-color);
+        padding: 20px;
+        box-shadow: var(--box-shadow);
+        margin-bottom: 40px;
+        animation: fadeIn var(--animation-duration);
+      }
+
+      .pricing-table table {
+        width: 100%;
+      }
+
+      .pricing-table th,
+      .pricing-table td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .pricing-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .pricing-table tr:hover {
+        background-color: var(--background-color);
+      }
+
+      .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: var(--primary-color);
+        color: #fff;
+        animation: fadeIn var(--animation-duration);
+      }
+
+      .copyright {
+        font-size: 0.8rem;
+        color: #000;
+        margin-left: auto;
+      }
+
+      .book-online-button {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #Ffc0cb;
+        color: #fff;
+        padding: 10px 60px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        animation: fade-in 2s forwards;
+      }
+
+      .book-online-button:hover {
+        background-color: #fff;
+        color: #Ffc0cb;
+        border: 2px solid #Ffc0cb;
+      }
+
+      .testimonials-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        margin: 0 -10px;
+        margin-bottom: 2rem;
+      }
+
+      .testimonial {
+        flex-basis: calc(33.33% - 20px);
+        margin: 10px;
+        background-color: var(--secondary-color);
+        box-shadow: var(--box-shadow);
+        padding: 1rem;
+        text-align: center;
+        transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+        animation: fadeIn var(--animation-duration);
+      }
+
+      .testimonial:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonial h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .service,
+        .testimonial {
+          flex-basis: calc(100% - 2rem);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.1);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromTop {
+        0% {
+          transform: translateY(-10px);
+          opacity: 0;
+        }
+
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromBottom {
+        0% {
+          transform: translateY(10px);
+          opacity: 0;
+        }
+
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+  </style>
+</head>
+<body>
+  <header>
+      <div class="container">
+          <nav>
+              <div class="logo-container">
+                  <a href="./index.html" class="logo">
+                      <img src="./assets/images/Untitled.png" alt="Amar Beauty And Spa Logo" />
+                  </a>
+              </div>
+
+              <div class="nav-container">
+                  <div class="nav-links">
+                      <a href="./index.html">Home</a>
+                      <a href="./public/about.html">Menu</a>
+                      <a href="./public/contact.html">Contact</a>
+                  </div>
+                  <div class="book-online-button">Book Online</div>
+              </div>
+              <div class="social-links">
+                  <a href="https://www.instagram.com/amar.beauty.spa/" class="social-link instagram">
+                      <img src="./assets/images/instagram.png" alt="Instagram Logo" />
+                  </a>
+                  <a href="https://www.facebook.com/p/Amar-Beauty-Spa-61554356595216/" class="social-link facebook">
+                      <img src="./assets/images/facebook.png" alt="Facebook Logo" />
+                  </a>
+                  <a href="https://www.tiktok.com/@amar.beauty.spa" class="social-link tiktok">
+                      <img src="./assets/images/tik-tok.png" alt="Tiktok Logo" />
+                  </a>
+              </div>
+          </nav>
+      </div>
+  </header>
+  <section class="hero container">
+      <div>
+          <h1>Relax and Rejuvenate</h1>
+          <p>
+              Experience the ultimate in relaxation and rejuvenation at Amar Beauty And Spa.
+          </p>
+          <a href="tel:404-434-6029" class="cta-button">Call Now!</a>
+      </div>
+  </section>
+  <section class="services container">
+      <div class="service">
+          <h2>Hair Services</h2>
+          <p>
+              We offer a variety of hair services including cuts, colors, and styling.
+          </p>
+      </div>
+      <div class="service">
+          <h2>Skin Services</h2>
+          <p>
+              Our skin services include facials, peels, and waxing to help you look and feel your best.
+          </p>
+      </div>
+      <div class="service">
+          <h2>Massage Services</h2>
+          <p>
+              Relax and unwind with our therapeutic massage services, including Swedish, deep tissue, and hot stone.
+          </p>
+      </div>
+  </section>
+  <section class="testimonials-container">
+      <div class="testimonial">
+          <img src="./assets/images/cat.png" alt="Testimonial 1" class="testimonial-image" />
+          <h3>Jimmy</h3>
+          <p>
+              "Amar Beauty and Spa is the best spa I've ever been to. The staff is friendly and professional, and the services are top-notch."
+          </p>
+      </div>
+      <div class="testimonial">
+          <img src="./assets/images/cat.png" alt="Testimonial 2" class="testimonial-image" />
+          <h3>Jane</h3>
+          <p>
+              "I've been going to Amar Beauty and Spa for years, and I've never had such great results from my skin treatment. They really know what they're doing!"
+          </p>
+      </div>
+      <div class="testimonial">
+          <img src="./assets/images/cat.png" alt="Testimonial 3" class="testimonial-image" />
+          <h3>Bob</h3>
+          <p>
+              "I highly recommend Amar Beauty and Spa to anyone looking for a relaxing and rejuvenating spa experience."
+          </p>
+      </div>
+  </section>
+  <section class="pricing-table">
+      <table>
+          <thead>
+              <tr>
+                  <th></th>
+                  <th>Basic</th>
+                  <th>Premium</th>
+                  <th>Luxury</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Haircut</td>
+                  <td>$30</td>
+                  <td>$40</td>
+                  <td>$50</td>
+              </tr>
+              <tr>
+                  <td>Color</td>
+                  <td>$60</td>
+                  <td>$80</td>
+                  <td>$100</td>
+              </tr>
+              <tr>
+                  <td>Facial</td>
+                  <td>$50</td>
+                  <td>$70</td>
+                  <td>$90</td>
+              </tr>
+              <tr>
+                  <td>Massage</td>
+                  <td>$60</td>
+                  <td>$80</td>
+                  <td>$100</td>
+              </tr>
+          </tbody>
+      </table>
+  </section>
+  <footer class="footer">
+      <div class="copyright">&copy; 2023 Amar Beauty And Spa</div>
+  </footer>
+</body>
+</html>
